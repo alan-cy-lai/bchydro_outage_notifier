@@ -1,0 +1,19 @@
+[package]
+name = "bc_hydro_notifier"
+version = "0.1.0"
+authors = ["Alan Lai"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+rand = "0.3.14"
+rss = { version = "^1.8", features = ["from_url"] }
+scraper = "^0.11"
+
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+opt-level = 3
